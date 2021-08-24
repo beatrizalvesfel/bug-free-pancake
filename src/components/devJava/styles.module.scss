@@ -1,0 +1,113 @@
+@use 'mixins' as *;
+
+.container {
+  @include container(x);
+  background: #0c0c0c;
+  cursor: default;
+  .topMenu {
+    .lista {
+      list-style: none;
+      display: flex;
+      padding: 1.4rem;
+      background: #0c0c0c;
+      justify-content: center;
+      .item {
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: lighter;
+        color: white;
+        cursor: pointer;
+        & + .item {
+          margin-left: 50px;
+          color: #727272;
+        }
+      }
+    }
+  }
+  .descricao {
+    padding: 48px 0;
+    box-shadow: 0px 2px 8px 1px rgba(255, 173, 30, 0.25);
+    div {
+      width: 80%;
+      margin: 0 auto;
+      .topBar {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 42px 0;
+        width: 100%;
+        .titleDescription {
+          font-size: 1.1rem;
+          font-weight: bold;
+          color: white;
+        }
+        .compartilharVaga {
+          width: fit-content;
+          margin: 0;
+          button {
+            background: transparent;
+            border: none;
+            display: flex;
+            cursor: pointer;
+            .comp {
+              font-size: 1.1rem;
+              font-weight: lighter;
+              color: white;
+              margin-right: 8px;
+              @media (max-width: 470px) {
+                display: none;
+              }
+            }
+            svg {
+              color: var(--primary);
+              width: 22px;
+              height: 22px;
+            }
+          }
+        }
+      }
+      .texts {
+        width: 100%;
+        p {
+          font-size: 1rem;
+          font-weight: normal;
+          color: white;
+          margin-bottom: 1.5rem;
+          line-height: 28px;
+        }
+        .experiencia,
+        .destaque,
+        .beneficios {
+          width: 100%;
+
+          h2 {
+            margin: 70px 0 28px;
+            color: var(--primary);
+            span {
+              font-weight: normal;
+              color: white;
+            }
+          }
+          ul {
+            margin-left: 20px;
+            li {
+              color: white;
+              font-size: 1rem;
+              font-weight: normal;
+              line-height: 28px;
+            }
+          }
+        }
+        h3 {
+          margin: 32px 0;
+          color: var(--primary);
+          font-weight: bold;
+          font-size: 1.2rem;
+          span {
+            font-weight: normal;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

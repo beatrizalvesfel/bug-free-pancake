@@ -1,0 +1,253 @@
+@use 'mixins' as *;
+
+.container {
+  @include container(x);
+  .topMenu {
+    .lista {
+      list-style: none;
+      display: flex;
+      padding: 1.4rem;
+      background: #0c0c0c;
+      justify-content: center;
+      .item {
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: lighter;
+        cursor: pointer;
+        color: #727272;
+        & + .item {
+          margin-left: 50px;
+          color: white;
+        }
+      }
+    }
+  }
+  .form {
+    padding: 48px 102px;
+    align-items: center;
+    background: #0c0c0c;
+    box-shadow: 0px 2px 8px 1px rgba(255, 173, 30, 0.25);
+    @media (max-width: 900px) {
+      padding: 48px;
+    }
+    form {
+      .importCurriculo {
+        display: flex;
+        border: 1px solid var(--primary);
+        border-radius: 14px;
+        padding: 42px 60px;
+        align-items: center;
+        margin-bottom: 40px;
+        .texts {
+          h5 {
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 1rem;
+          }
+          span {
+            font-size: 12px;
+            font-weight: normal;
+            color: white;
+          }
+        }
+        .curriculoFile {
+          display: flex;
+          justify-content: space-between;
+          padding: 0 32px;
+          background: var(--primary);
+          color: black;
+          border-radius: 14px;
+          min-width: 302px;
+          height: 52px;
+          margin-bottom: 0;
+          box-shadow: 0px 0px 6px 1px #ffad1e;
+          cursor: pointer;
+          span {
+            font-family: "roboto";
+            font-size: 18px;
+            font-weight: 600;
+            align-self: center;
+          }
+          svg {
+            align-self: center;
+            width: 36px;
+            height: 36px;
+            color: black;
+          }
+        }
+      }
+      p {
+        color: white;
+        font-size: 1rem;
+        font-weight: lighter;
+        padding-bottom: 16px;
+        span {
+          color: var(--primary);
+        }
+      }
+      .titles {
+        margin-bottom: 32px;
+      }
+      h3 {
+        padding-top: 1rem;
+        color: var(--primary);
+        font-size: 22px;
+        line-height: 26px;
+        font-weight: normal;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      .nome {
+        display: flex;
+        justify-content: space-between;
+        div {
+          display: inline-grid;
+          width: 45%;
+          margin-bottom: 0;
+        }
+      }
+      div {
+        display: inline-grid;
+        width: 100%;
+        margin-bottom: 16px;
+      }
+      label {
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        .textNormal {
+          font-weight: lighter;
+        }
+      }
+      input,
+      textarea {
+        border: 1px solid rgba(255, 173, 30, 0.25);
+        border-radius: 8px;
+        height: 48px;
+        padding: 8px 16px;
+        margin: 8px 0;
+        background: transparent;
+        color: white;
+        &:focus {
+          outline: none;
+        }
+      }
+      textarea {
+        padding: 16px 16px;
+        height: 160px;
+        color: white;
+      }
+      .curriculoButton {
+        background: rgba(255, 173, 30, 0.08);
+        border: 1px dashed rgba(255, 173, 30, 0.25);
+        border-radius: 7px;
+        align-content: center;
+        width: 100%;
+        height: 112px;
+        margin-top: 16px;
+        cursor: pointer;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      input[type="file"] {
+        display: none;
+        background: var(--primary);
+        cursor: pointer;
+        transition: linear 0.2s;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+      input[type="file"]::-webkit-file-upload-button {
+        border: none;
+        background: var(--primary);
+        color: white;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 8px 32px;
+        border-radius: 24px;
+      }
+      .senioridade {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+        margin-top: 24px;
+        div {
+          display: flex;
+          align-items: center;
+        }
+        input {
+          margin-right: 8px;
+        }
+        @media (max-width: 900px) {
+          flex-direction: column;
+          div {
+            justify-content: center;
+          }
+        }
+      }
+      button {
+        width: 100%;
+        padding: 1rem 0;
+        background: var(--primary);
+        border: none;
+        box-shadow: 0px 0px 6px 1px #ffad1e;
+        border-radius: 14px;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        margin-top: 32px;
+        cursor: pointer;
+        transition: linear 0.2s;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    @media (max-width: 900px) {
+      .importCurriculo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        .texts {
+          margin-bottom: 2rem;
+        }
+      }
+      .nome {
+        display: flex;
+        flex-direction: column;
+        div {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 24px;
+  @media (max-width: 800px) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    .itemGrid {
+      justify-content: center;
+    }
+  }
+}
+.itemGrid {
+  display: flex !important;
+  align-items: center;
+  margin: 0 !important;
+  label {
+    margin-left: 8px;
+    font-size: 14px;
+    font-weight: normal;
+  }
+}

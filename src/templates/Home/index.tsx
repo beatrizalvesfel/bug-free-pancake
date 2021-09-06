@@ -101,14 +101,10 @@ export default function Home() {
             </h1>
             <span className={styles.subtitle}>Talento e dedicação</span>
             <p className={styles.paragrafo}>
-              Somos uma empresa jovem, com pessoas experientes. Profissionais
-              com uma média de 17 anos na indústria de TI e Comunicação.
-            </p>
-            <p className={styles.paragrafo}>
-              Formamos uma equipe onde a combinação de nossos talentos resulta
-              em muito mais que aplicativos, jogos, sites, gamification,
-              internet das coisas ou qualquer outra coisa que envolva bits e
-              bytes.
+              Somos uma empresa jovem, com pessoas experientes. Formamos uma
+              equipe onde a combinação de nossos talentos resulta em muito mais
+              que aplicativos, jogos, sites, gamification, internet das coisas
+              ou qualquer outra coisa que envolva bits e bytes.
             </p>
             <div className={styles.sitacaoContainer}>
               <h5 className={styles.sitacao}>
@@ -311,21 +307,6 @@ export default function Home() {
                 </a>
               </div>
             </div>
-          </div>
-          <div className={styles.cta}>
-            <h2 className={styles.titleCta}>
-              Tem um novo projeto<span className={styles.spanCta}>?</span>
-            </h2>
-            <h4 className={styles.textCta}>
-              Uma longa viagem começa com um único passo.
-            </h4>
-            <a
-              href="https://api.whatsapp.com/send?phone=5519996238785"
-              target="_blank"
-              rel="noreferrer"
-            >
-              ENTRAR EM CONTATO
-            </a>
           </div>
         </section>
       </main>

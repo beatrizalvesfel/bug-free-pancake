@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
+// import Link from "next/link";
 import styles from "./styles.module.scss";
 import { useRouter } from "next/router";
-
+import { Link, animateScroll as scroll } from "react-scroll";
 import { Menu as MenuIcon } from "@styled-icons/zondicons/Menu";
 import { Close } from "@styled-icons/evaicons-solid/Close";
 
@@ -24,23 +24,51 @@ export const Menu = () => {
           <div className={` menu-content  ${opened ? "opened" : ""}`}>
             <ul>
               <li>
-                <Link href="/">
+                <Link
+                  activeClass="active"
+                  to="inicio"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
                   <a className={styles.item}>Inicío</a>
                 </Link>
               </li>
               <li>
-                <Link href="#sobre">
+                <Link
+                  activeClass="active"
+                  to="sobre"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
                   <a className={styles.item}>Sobre nós</a>
                 </Link>
               </li>
               <li>
-                <Link href="#clientes">
+                <Link
+                  activeClass="active"
+                  to="clientes"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
                   <a className={styles.item}>Clientes</a>
                 </Link>
               </li>
               <li>
-                <Link href="#contatos">
-                  <a className={styles.item}>Contato</a>
+                <Link
+                  activeClass="active"
+                  to="contatos"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  <a className={styles.itemContato}>Contato</a>
                 </Link>
               </li>
               {/* <li className={page === "/carreira" ? "active" : ""}>

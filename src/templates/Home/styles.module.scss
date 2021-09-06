@@ -205,6 +205,8 @@
         }
       }
       .map {
+        margin-bottom: 5rem;
+
         .img {
           margin-top: 40px;
           box-shadow: 0px 0px 14px 2px #ffad1e !important;
@@ -217,53 +219,6 @@
             box-shadow: 0px 0px 14px 6px #ffad1e !important;
           }
         }
-      }
-    }
-  }
-  .cta {
-    background: linear-gradient(
-      180deg,
-      rgba(255, 173, 30, 0) 0%,
-      #ffad1e 3.12%,
-      #ffad1e 95.31%,
-      rgba(255, 173, 30, 0) 97.92%
-    );
-    padding: 80px 0;
-    margin-top: 102px;
-    .titleCta {
-      font-size: 4rem;
-      font-weight: bold;
-      color: white;
-      .spanCta {
-        color: black;
-      }
-    }
-    .textCta {
-      font-size: 1.7rem;
-      color: black;
-      font-style: normal;
-      font-weight: bold;
-      font-family: "Dancing Script";
-      margin-bottom: 2rem;
-    }
-    a {
-      background: black;
-      border-radius: 24px;
-      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-      width: 292px;
-      text-transform: uppercase;
-      padding: 0.8rem 32px;
-      color: white;
-      font-size: 1.1rem;
-      font-weight: 600;
-      cursor: pointer;
-      border: 4px solid black;
-      transition: linear 0.2s;
-      &:hover {
-        transform: scale(1.1);
-        border: 4px solid black;
-        background: none;
-        color: black;
       }
     }
   }
@@ -759,6 +714,8 @@
         margin-bottom: 2.5rem;
       }
       .contatos {
+        margin-bottom: 3rem;
+
         .item {
           padding: 0 1.5rem;
           margin-bottom: 1.2rem;
@@ -776,19 +733,6 @@
             width: 95%;
           }
         }
-      }
-    }
-    .cta {
-      padding: 64px 0;
-      margin-top: 102px;
-      .titleCta {
-        font-size: 2rem;
-      }
-      .textCta {
-        font-size: 1.3rem;
-      }
-      a {
-        font-size: 0.8rem;
       }
     }
   }
